@@ -1,0 +1,96 @@
+<!-- ======= Main Section ======= -->
+<main id="main">
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact section-bg p-12">
+    <div class="container-fluid">
+      <!-- ======= Team Section ======= -->
+      <section id="team" class="team">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg"></div>
+            <div class="col-lg-6">
+              <form (ngSubmit)="add()" #forma="ngForm">
+                <h1>Activar usuario</h1>
+                <p>
+                  Introduzca la contraseña y verificalo antes de activar tu
+                  usuario
+                </p>
+                <label for="email"><b>Fecha de Nacimiento</b></label>
+                <app-date-picker-legal-age
+                  (newDate)="dataAsing($event)"
+                ></app-date-picker-legal-age>
+                <label for="password"><b>Contraseña</b></label>
+                <input
+                  type="password"
+                  #password="ngModel"
+                  [(ngModel)]="values.password"
+                  placeholder="Introduzca la contraseña"
+                  name="password"
+                  class="form-control"
+                  [ngClass]="{
+                    'is-valid': !password.invalid,
+                    'is-invalid': password.invalid
+                  }"
+                  required
+                />
+
+                <div
+                  class="alert alert-danger"
+                  *ngIf="
+                    password.invalid && (password.dirty || password.touched)
+                  "
+                >
+                  <div *ngIf="password.errors.required">
+                    Introduzca la contraseña
+                  </div>
+                </div>
+                <label for="passwordTwo"><b>Repita Contraseña</b></label>
+                <input
+                  type="password"
+                  #passwordTwo="ngModel"
+                  [(ngModel)]="values.passwordTwo"
+                  placeholder="Repita la contraseña"
+                  name="passwordTwo"
+                  class="form-control"
+                  [ngClass]="{
+                    'is-valid': !passwordTwo.invalid,
+                    'is-invalid': passwordTwo.invalid
+                  }"
+                  required
+                />
+
+                <div
+                  class="alert alert-danger"
+                  *ngIf="
+                    passwordTwo.invalid &&
+                    (passwordTwo.dirty || passwordTwo.touched)
+                  "
+                >
+                  <div *ngIf="passwordTwo.errors.required">
+                    Introduzca la contraseña
+                  </div>
+                </div>
+
+                <div class="row">
+                  <div class="col-lg">
+                    <button
+                      type="submit"
+                      [disabled]="!forma.valid"
+                      class="signup-btn"
+                    >
+                      Activar usuario
+                    </button>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div class="col-lg"></div>
+          </div>
+        </div>
+      </section>
+      <!-- End Team Section -->
+    </div>
+  </section>
+  <!-- End Contact Section -->
+</main>
+<!-- End #main -->

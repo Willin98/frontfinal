@@ -1,0 +1,15 @@
+@import "./../../pages/public.component.scss";
+
+section#team {
+  padding-top: 10px !important;
+}
+
+ul.social {
+  margin-left: -35px;
+  margin-bottom: 5px;
+}
+
+.dropdown-item,
+.fas {
+  cursor: pointer;
+}

@@ -1,0 +1,29 @@
+@import "./../../../pages/public.component.scss";
+
+.container-fluid {
+    background: #444444;
+}
+
+span {
+    color: #b5121b;
+}
+
+button.navbar-toggler.collapsed {
+    position: absolute;
+    right: 0;
+}
+
+.dropdown-menu.show {
+    background: #444444;
+}
+
+.dropdown-item, .fas {
+    cursor: pointer;
+}
+
+span.badge.badge-success.notification {
+    position: relative;
+    top: -10px;
+    left: -2px;
+    border-radius: 10px;
+}

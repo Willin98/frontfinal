@@ -1,0 +1,165 @@
+<section id="hero">
+  <div
+    id="heroCarousel"
+    data-bs-interval="5000"
+    class="carousel slide carousel-fade"
+    data-bs-ride="carousel"
+  >
+    <ol class="carousel-indicators" id="hero-carousel-indicators">
+      <li
+        data-target="#heroCarousel"
+        *ngFor="let slide of items; let slidePos = index"
+        data-slide-to="slidePos"
+        [ngClass]="{ active: slidePos == 0 }"
+      ></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+      <div
+        class="carousel-item url-item active"
+        *ngFor="let item of items; let i = index"
+        style="background-image: url({{item.img}})"
+        [ngClass]="{ active: i == 0 }"
+        (click)="open(i)"
+      >
+        <div class="carousel-container">
+          <div class="container">
+            <h2 class="animated fadeInDown">{{ item.name }}</h2>
+            <a
+              (click)="showDetails(item)"
+              class="btn-get-started animated fadeInUp scrollto"
+              >Info</a
+            >
+            <!--<p class="animated fadeInUp">Ut velit est quam dolor ad a aliquid qui aliquid. Sequi ea ut et est quaerat sequi nihil ut aliquam. Occaecati alias dolorem mollitia ut. Similique ea voluptatem. Esse doloremque accusamus repellendus deleniti vel. Minus et tempore modi architecto.</p>
+            <a href="#about" class="btn-get-started animated fadeInUp scrollto">Read More</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+    <a
+      class="carousel-control-prev"
+      href="#heroCarousel"
+      role="button"
+      data-slide="prev"
+    >
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    </a>
+    <a
+      class="carousel-control-next"
+      href="#heroCarousel"
+      role="button"
+      data-slide="next"
+    >
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    </a>
+  </div>
+</section>
+
+<!-- ======= Main Section ======= -->
+<main id="main">
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact section-bg p-12">
+    <div class="container-fluid">
+      <!-- ======= Team Section ======= -->
+      <section id="team" class="team">
+        <div class="container-fluid">
+          <div class="section-title">
+            <h2>Cartelera</h2>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-xl-10">
+              <div class="row">
+                <div
+                  class="col-xl-3 col-lg-4 col-md-6"
+                  *ngFor="let item of listTwo"
+                >
+                  <div class="member">
+                    <img src="{{ item.poster }}" class="img-fluid" alt="" />
+                    <div class="member-info">
+                      <div class="member-info-content">
+                        <h4>{{ item.name }}</h4>
+                      </div>
+                      <ul class="social">
+                        <!--<li>
+                          <a
+                            class="item-button-options"
+                            (click)="addToCart(item)"
+                            data-tip="Añadir a la cesta"
+                            ><i class="fas fa-cart-plus"></i
+                          ></a>
+                        </li>-->
+                        
+                          <a
+                            class="item-button-options"
+                            (click)="showDetails(item)"
+                            data-tip="Detalles del producto"
+                            ><i class="fas fa-info"></i
+                          ></a>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Member Item -->
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="container-fluid">
+          <div class="section-title">
+            <h2>Proximamente</h2>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-xl-10">
+              <div class="row">
+                <div
+                  class="col-xl-3 col-lg-4 col-md-6"
+                  *ngFor="let item of listProx"
+                >
+                  <div class="member">
+                    <img src="{{ item.poster }}" class="img-fluid" alt="" />
+                    <div class="member-info">
+                      <div class="member-info-content">
+                        <h4>{{ item.name }}</h4>
+                        <span>Proximamente</span>
+                      </div>
+                      <ul class="social">
+                        <!--<li>
+                          <a
+                            class="item-button-options"
+                            (click)="addToCart(item)"
+                            data-tip="Añadir a la cesta"
+                            ><i class="fas fa-cart-plus"></i
+                          ></a>
+                        </li>-->
+                        
+                          <a
+                            class="item-button-options"
+                            (click)="showDetailsProx(item)"
+                            data-tip="Detalles del producto"
+                            ><i class="fas fa-info"></i
+                          ></a>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Member Item -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Team Section -->
+    </div>
+  </section>
+  <!-- End Contact Section -->
+</main>
+<!-- End #main -->
+
+<!--<app-product-category-list *ngIf="listOne"
+[title]="'Proximamente'"
+[productsList]="listOne"
+></app-product-category-list>-->

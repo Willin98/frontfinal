@@ -1,0 +1,76 @@
+<nav class="navbar navbar-expand-lg">
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span><i class="fas fa-bars"></i></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active" *ngFor="let item of menuItems">
+        <a
+          class="nav-link scrollto active"
+          class="nav-link"
+          [routerLink]="item.url"
+          routerLinkActive="router-link-active"
+          >{{ item.label }}</a
+        >
+      </li>
+    </ul>
+    <ul class="navbar-nav ml-auto mt-2 mt-lg-0">
+        <li class="nav-item" *ngIf="access && role != 'CLIENT'">
+          <a
+            class="nav-link scrollto"
+            class="nav-link"
+            [routerLink]="['/admin']"
+            routerLinkActive="router-link-active"
+            >Admin</a
+          >
+      </li>
+      <li class="nav-item" *ngIf="!access">
+        <a
+          class="nav-link scrollto"
+          class="nav-link"
+          [routerLink]="['/login']"
+          routerLinkActive="router-link-active"
+          >Login</a
+        >
+      </li>
+      <li class="nav-item" *ngIf="!access">
+        <a
+          class="nav-link scrollto"
+          class="nav-link"
+          [routerLink]="['/register']"
+          routerLinkActive="router-link-active"
+          >Registro</a
+        >
+      </li>
+      <li class="nav-item dropdown" *ngIf="access">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+          {{ userLabel }}
+        </a>
+        <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+          <a class="dropdown-item" [routerLink]="['/orders']" routerLinkActive="router-link-active">Pedidos</a>
+          <a class="dropdown-item" href="#">Configuracion</a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" (click)="logout()">Salir</a>
+        </div>
+      </li>
+      <li class="nav-item">
+        <a
+          class="nav-link scrollto"
+          class="nav-link"
+          (click)="open()"
+          ><i class="fas fa-shopping-cart"></i>
+          <span class="badge badge-success notification">{{ cartItemsTotal }}</span></a
+        >
+      </li>
+    </ul>
+  </div>
+</nav>

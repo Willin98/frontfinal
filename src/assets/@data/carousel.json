@@ -1,0 +1,27 @@
+[
+    {
+      "id": "01",
+      "title": "Spider-Man:No Way Home",
+      "description": "Por primera vez en la historia cinematográfica de Spider-Man, nuestro héroe, vecino y amigo es desenmascarado, y por tanto, ya no es capaz de separar su vida normal de los enormes riesgos que conlleva ser un superhéroe. Cuando pide ayuda al Doctor Strange, los riesgos pasan a ser aún más peligrosos, obligándole a descubrir lo que realmente significa ser él.",
+      "url": "http://www.rockstargames.com/V/",
+      "background": "https://www.themoviedb.org/t/p/original/nMMEymOEQwRSShiYXHqBtfF2XvJ.jpg",
+      "poster": "https://www.themoviedb.org/t/p/original/iJDPnoZ7IafVxrxq0qRUsoBINoR.jpg"
+    },
+    {
+      "id": "02",
+      "title": "Matrix Resurrections",
+      "description": "En un mundo compuesto por dos realidades, lo cotidiano y lo oculto tras ella, Thomas Anderson se ve obligado de nuevo a ir tras el conejo blanco. Dicha elección continúa siendo la vía de acceso a Matrix, que esta vez es más poderosa e intrincada que en ocasiones anteriores.",
+      "url": "https://tombraider.square-enix-games.com/en-us",
+      "background": "https://www.themoviedb.org/t/p/original/nMMEymOEQwRSShiYXHqBtfF2XvJ.jpg",
+      "poster": "https://www.themoviedb.org/t/p/original/iJDPnoZ7IafVxrxq0qRUsoBINoR.jpg"
+    },
+    {
+      "id": "03",
+      "title": "¡Canta! 2",
+      "description": "Buster Moon y sus amigos deben persuadir a la estrella del rock Clay Calloway para que se una a ellos en el estreno de un nuevo espectáculo.",
+      "url": "https://tombraider.square-enix-games.com/en-us",
+      "background": "https://www.themoviedb.org/t/p/original/nMMEymOEQwRSShiYXHqBtfF2XvJ.jpg",
+      "poster": "https://www.themoviedb.org/t/p/original/iJDPnoZ7IafVxrxq0qRUsoBINoR.jpg"
+    }
+  ]
+  

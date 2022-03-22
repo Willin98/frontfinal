@@ -1,0 +1,46 @@
+<!-- ======= Main Section ======= -->
+<main id="main">
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact section-bg p-12">
+    <div class="container-fluid">
+      <!-- ======= Team Section ======= -->
+      <section id="team" class="team">
+        <!-- Page Content -->
+        <div class="container" *ngIf="proximamente && !loading">
+          <!-- Portfolio Item Row -->
+          <div class="row">
+            <div class="col-md-4">
+              <div class="member">
+                <img [src]="selectImage" class="img-fluid" alt="" />
+                <div class="member-info">
+                  <ul class="social">
+                    <a
+                      [href]="selectVideo"
+                      class="item-button-options"
+                      data-tip="Detalles del producto"
+                      width="500"
+                      height="500"
+                      ><i class="fas fa-play-circle"></i
+                    ></a>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col-md-8">
+              <h3 class="my-3">{{ proximamente.name }}</h3>
+              <p>
+                {{ proximamente.description }}
+              </p>
+              <br />
+            </div>
+          </div>
+          <!-- /.row -->
+          <!-- /.row -->
+        </div>
+      </section>
+      <!-- End Team Section -->
+    </div>
+  </section>
+  <!-- End Contact Section -->
+</main>
+<!-- End #main -->

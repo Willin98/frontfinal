@@ -1,0 +1,26 @@
+@import "./../../../pages/public.component.scss";
+
+section#team {
+  padding-top: 0;
+}
+
+.dropdown-item,
+.fas {
+  cursor: pointer;
+}
+
+ul.social {
+  margin-bottom: 5px;
+  width: 300px;
+  height: 250px !important;
+  margin-top: -20px;
+}
+
+.price {
+  font-size: 22px;
+  font-weight: 800;
+  color: #cc1c39;
+  text-align: left;
+  margin-left: 5px;
+  margin-bottom: 12px;
+}

@@ -1,0 +1,58 @@
+<!-- ======= Main Section ======= -->
+<main id="main">
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact section-bg p-12">
+    <div class="container-fluid">
+      <!-- ======= Team Section ======= -->
+      <section id="team" class="team">
+        <div class="container-fluid">
+          <div class="section-title">
+            <h2>Comida</h2>
+          </div>
+
+          <div class="row justify-content-center">
+            <div class="col-xl-10">
+              <div class="row">
+                <div
+                  class="col-xl-3 col-lg-4 col-md-6"
+                  *ngFor="let item of items"
+                >
+                  <div class="member">
+                    <img src="{{ item.img }}" class="img-fluid" alt="" />
+                    <div class="member-info">
+                      <div class="member-info-content">
+                        <h4>{{ item.name }}</h4>
+                      </div>
+                      <ul class="social">
+                        <!--<li>
+                          <a
+                            class="item-button-options"
+                            (click)="addToCart(item)"
+                            data-tip="Añadir a la cesta"
+                            ><i class="fas fa-cart-plus"></i
+                          ></a>
+                        </li>-->
+
+                          <a
+                            class="item-button-options"
+                            (click)="showDetails(item)"
+                            data-tip="Detalles del producto"
+                            ><i class="fas fa-info"></i
+                          ></a>
+                        
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                <!-- End Member Item -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Team Section -->
+    </div>
+  </section>
+  <!-- End Contact Section -->
+</main>
+<!-- End #main -->

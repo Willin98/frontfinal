@@ -1,0 +1,12 @@
+<div class="row py-3">
+  <h5 class="m-0 col-9 font-weight-bold text-primary" style="text-align:center">Generos</h5>
+</div>
+<app-table-pagination
+  [query]="query"
+  [context]="context"
+  [itemsPage]="itemsPage"
+  [resultData]="resultData"
+  [include]="include"
+  [tableColumns]="columns"
+  (manageItem)="takeAction($event)"
+></app-table-pagination>

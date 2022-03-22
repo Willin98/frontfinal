@@ -1,0 +1,13 @@
+@import "./../../../../../assets/style/forms.scss";
+
+main {
+  padding: 100px;
+}
+
+form.card.p-2 {
+  height: 75px;
+}
+
+form.needs-validation.ng-untouched.ng-pristine.ng-valid {
+  height: 75%!important;
+}

@@ -1,0 +1,58 @@
+<!-- ======= Main Section ======= -->
+<main id="main">
+  <!-- ======= Contact Section ======= -->
+  <section id="contact" class="contact section-bg p-12">
+    <div class="container-fluid">
+      <!-- ======= Team Section ======= -->
+      <section id="team" class="team">
+        <div class="container mt-4" *ngIf="meData && available">
+          <div class="row">
+            <div class="col-md-4 order-md-2 mb-4">
+              <app-checkout-resume></app-checkout-resume>
+            </div>
+            <div class="col-md-8 order-md-1">
+              <h4 class="mb-3">Informacion de pago</h4>
+              <hr />
+              <form class="needs-validation" (ngSubmit)="sendData()" #forma="ngForm">
+                <div class="row">
+                  <div class="col-md-6 mb-3">
+                    <label>Nombre</label><br />
+                    <span>{{ meData.user.name }}</span>
+                  </div>
+                  <div class="col-md-6 mb-3">
+                    <label>Apellido</label><br />
+                    <span>{{ meData.user.lastname }}</span>
+                  </div>
+                </div>
+
+                <div class="mb-3">
+                  <label>Correo</label><br />
+                  <span>{{ meData.user.email }}</span>
+                </div>
+                <hr class="mb-4" />
+
+                <h4 class="mb-3">Informacion de la tarjeta</h4>
+
+                <div class="row">
+                  <div class="col-lg">
+                    <ng-stripe-pay-form
+                      [key]="key"
+                      [hidePostalCode]="true"
+                    ></ng-stripe-pay-form>
+                  </div>
+                </div>
+                
+              </form>
+              <button class="signup-btn" [disabled]="!forma.valid || block" (click)="sendData()" type="submit">
+                Realizar Pago
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Team Section -->
+    </div>
+  </section>
+  <!-- End Contact Section -->
+</main>
+<!-- End #main -->
